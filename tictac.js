@@ -1,19 +1,24 @@
 
- function ready() {
-
-  var player_robot = document.getElementsByClassName("choose-robot");
-  var player_human = document.getElementsByClassName("choose-human");
+  let player_robot = document.getElementsByClassName("choose-robot");
+  let player_human = document.getElementsByClassName("choose-human");
   let choise;
   let first_player;
   let second_player;
 
+ function ready() {
+
+
+function disabledButtons(){
+  if (choise==="Robot"){
+   // console.log('Here');
+   player_human.getElementsById("button_human").setAttribute("id","34");
+  }
+}
     
   function choiseRobot() {
     document.getElementById("humanjpg").setAttribute("src", ".\\img\\you.jpg");
-    //document.getElementsById("button_ii").setAttribute("id", "deactive1");
-   // document.getElementsById("button_human").setAttribute("id", "deactive2");
-
     choise = "Robot";
+    disabledButtons();
   }
   function choiseHuman() {
     document.getElementById("robotjpg").setAttribute("src", ".\\img\\you.jpg");
@@ -23,10 +28,7 @@
   document.getElementById("button_ii").onclick = choiseRobot;
   document.getElementById("button_human").onclick = choiseHuman;
 
-  if (choise==="robot"){
-    console.log('Here');
-    player_human.getElementsByClass("buttons").setAttribute("id", " ");
-  }
+  
  
 // document.getElementsByClassName('choose-robot').click = function(){alert("ROBOT")};
  // let imageRobot = chooseRobot.getElementsByTagName('img');
