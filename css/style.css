@@ -2,6 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
 .buttons{
+    height: 80px;
+    top: 20px;
     position: relative;
     cursor: pointer;
     background: #fff;
@@ -14,10 +16,14 @@
 }
 
 .buttons:hover{
-    
+    height: 80px;
     background: rgb(190, 190, 190);
        
 
+}
+
+.table_elem{
+    height: 30px;
 }
 .table_elem:hover{
     background: rgb(190, 190, 190);
@@ -302,4 +308,4 @@
             
             
         
-                }
+               
