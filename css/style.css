@@ -169,7 +169,8 @@
 
     }
 
-    .victoria>div{
+    #victory_text{
+        position: relative;
         grid-area: info-player;
         color: #c00202;
         border: 0em;
@@ -178,14 +179,15 @@
 
     }
     .victoria{
-        grid-area: victory;
+        position: relative;
+        grid-area: victorys;
         display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows:   40%  1fr 40%;
+        grid-template-columns: 40px;
+        grid-template-rows:   40% 1fr 40%;
         grid-template-areas: 
-        ". . ."
-        ". info-player ." 
-        ". . ."  ;
+        "."
+        "info-player" 
+        "."  ;
 
     }
     .choose>p{
@@ -196,12 +198,12 @@
         grid-area: choose-opponent;
         display: grid;
         grid-template-columns: 1.5fr 1fr 1.5fr;
-        grid-template-rows:   20% 1fr 2%;
+        grid-template-rows: 20% 1fr 2%;
         justify-content: center;
         grid-template-areas: 
         ". choose_text ."
-        "choose_robot victory choose_human" 
-        ". . ."  ;
+        "choose_robot victorys choose_human" 
+        ". . .";
 
     }
     .canvas>table{
