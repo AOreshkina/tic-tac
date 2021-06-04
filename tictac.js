@@ -11,7 +11,8 @@
   let player_robot = document.getElementById("button_ii");
   let player_human = document.getElementById("button_human");
   let your_symbol = document.getElementById("victoria");
-  let tabels = document.getElementsByClassName("void");
+  let tabels = [];
+  tabels= document.getElementsByClassName("void");
  // let view_table_element = document.getElementsByClassName("void");
 
 
@@ -37,16 +38,72 @@
     
   }
 
-  
+  let table = document.getElementById("a1");
+  table.onclick = function(){
+    console.log(this)
+     this.innerHTML=`<img src=".\\img\\cross1.jpg" alt="" class="void">`
 
-  tabels.forEach(function(item){
+  }
+
+  let table = document.getElementById("a2");
+  table.onclick = function(){
+    console.log(this)
+     this.innerHTML=`<img src=".\\img\\cross1.jpg" alt="" class="void">`
+
+  }
+  let table = document.getElementById("a3");
+  table.onclick = function(){
+    console.log(this)
+     this.innerHTML=`<img src=".\\img\\cross1.jpg" alt="" class="void">`
+
+  }
+  let table = document.getElementById("b1");
+  table.onclick = function(){
+    console.log(this)
+     this.innerHTML=`<img src=".\\img\\cross1.jpg" alt="" class="void">`
+
+  }
+  let table = document.getElementById("b2");
+  table.onclick = function(){
+    console.log(this)
+     this.innerHTML=`<img src=".\\img\\cross1.jpg" alt="" class="void">`
+
+  }
+  let table = document.getElementById("b3");
+  table.onclick = function(){
+    console.log(this)
+     this.innerHTML=`<img src=".\\img\\cross1.jpg" alt="" class="void">`
+
+  }
+  let table = document.getElementById("c1");
+  table.onclick = function(){
+    console.log(this)
+     this.innerHTML=`<img src=".\\img\\cross1.jpg" alt="" class="void">`
+
+  }
+
+  let table = document.getElementById("c2");
+  table.onclick = function(){
+    console.log(this)
+     this.innerHTML=`<img src=".\\img\\cross1.jpg" alt="" class="void">`
+
+  }
+  
+  let table = document.getElementById("c3");
+  table.onclick = function(){
+    console.log(this)
+     this.innerHTML=`<img src=".\\img\\cross1.jpg" alt="" class="void">`
+
+  }
+
+ /* tabels.forEach(function(item){
     if(choise==='human'){
       item.onclick=item.setAttribute("src",".\\img\\cross1.jpg")
 
     }
     
   })
-
+*/
 
  
   /*if (choise=='robot'){
