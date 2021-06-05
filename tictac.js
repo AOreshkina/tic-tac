@@ -4,7 +4,8 @@
   let choise;
   let first_player;
   let second_player;
-
+  let count = 0;
+  let counter_on_page = document.getElementById("counter");
  function ready() {
 
   the_buttons = document.getElementsByClassName("buttons");
@@ -38,80 +39,107 @@
     
   }
 
-  let table = document.getElementById("a1");
-  table.onclick = function(){
-    console.log(this)
-     this.innerHTML=`<img src=".\\img\\cross1.jpg" alt="" class="void">`
-
-  }
-
-  let table = document.getElementById("a2");
-  table.onclick = function(){
-    console.log(this)
-     this.innerHTML=`<img src=".\\img\\cross1.jpg" alt="" class="void">`
-
-  }
-  let table = document.getElementById("a3");
-  table.onclick = function(){
-    console.log(this)
-     this.innerHTML=`<img src=".\\img\\cross1.jpg" alt="" class="void">`
-
-  }
-  let table = document.getElementById("b1");
-  table.onclick = function(){
-    console.log(this)
-     this.innerHTML=`<img src=".\\img\\cross1.jpg" alt="" class="void">`
-
-  }
-  let table = document.getElementById("b2");
-  table.onclick = function(){
-    console.log(this)
-     this.innerHTML=`<img src=".\\img\\cross1.jpg" alt="" class="void">`
-
-  }
-  let table = document.getElementById("b3");
-  table.onclick = function(){
-    console.log(this)
-     this.innerHTML=`<img src=".\\img\\cross1.jpg" alt="" class="void">`
-
-  }
-  let table = document.getElementById("c1");
-  table.onclick = function(){
-    console.log(this)
-     this.innerHTML=`<img src=".\\img\\cross1.jpg" alt="" class="void">`
-
-  }
-
-  let table = document.getElementById("c2");
-  table.onclick = function(){
-    console.log(this)
-     this.innerHTML=`<img src=".\\img\\cross1.jpg" alt="" class="void">`
-
-  }
-  
-  let table = document.getElementById("c3");
-  table.onclick = function(){
-    console.log(this)
-     this.innerHTML=`<img src=".\\img\\cross1.jpg" alt="" class="void">`
-
-  }
-
- /* tabels.forEach(function(item){
+ 
+  document.getElementById("a1").onclick = function(){
     if(choise==='human'){
-      item.onclick=item.setAttribute("src",".\\img\\cross1.jpg")
+      if(count%2==0){
+        document.getElementById("a1").innerHTML=`<img src=".\\img\\cross1.jpg" alt="" class="void">`;
+        count=count+1;
+      }else{
+        document.getElementById("a1").innerHTML=`<img src=".\\img\\zero1.jpg" alt="" class="void">`;
+        count=count+1;
 
-    }
+      }}}
     
-  })
-*/
+           
+  document.getElementById("a2").onclick = function(){
+    if(choise==='human'){
+      if(count%2==0){
+        document.getElementById("a2").innerHTML=`<img src=".\\img\\cross1.jpg" alt="" class="void">`;
+        count=count+1;
+      }else{
+        document.getElementById("a2").innerHTML=`<img src=".\\img\\zero1.jpg" alt="" class="void">`;
+        count=count+1;
 
- 
-  /*if (choise=='robot'){
-    console.log("jfgkgjfgfkg");
+      }}}
+      
+  document.getElementById("a3").onclick = function(){
+    if(choise==='human'){
+      if(count%2==0){
+        document.getElementById("a3").innerHTML=`<img src=".\\img\\cross1.jpg" alt="" class="void">`;
+        count=count+1;
+      }else{
+        document.getElementById("a3").innerHTML=`<img src=".\\img\\zero1.jpg" alt="" class="void">`;
+        count=count+1;
+
+      }}}
+
+  document.getElementById("b1").onclick = function(){
+    if(choise==='human'){
+      if(count%2==0){
+        document.getElementById("b1").innerHTML=`<img src=".\\img\\cross1.jpg" alt="" class="void">`;
+        count=count+1;
+      }else{
+        document.getElementById("b1").innerHTML=`<img src=".\\img\\zero1.jpg" alt="" class="void">`;
+        count=count+1;
+
+      }}}
     
-    your_symbol.innerHTML=`<img src=".\img\yourchoice2.jpg" alt="" id="symbol_zero">`;
-  }*/
+           
+  document.getElementById("b2").onclick = function(){
+    if(choise==='human'){
+      if(count%2==0){
+        document.getElementById("b2").innerHTML=`<img src=".\\img\\cross1.jpg" alt="" class="void">`;
+        count=count+1;
+      }else{
+        document.getElementById("b2").innerHTML=`<img src=".\\img\\zero1.jpg" alt="" class="void">`;
+        count=count+1;
+
+      }}}
+      
+  document.getElementById("b3").onclick = function(){
+    if(choise==='human'){
+      if(count%2==0){
+        document.getElementById("b3").innerHTML=`<img src=".\\img\\cross1.jpg" alt="" class="void">`;
+        count=count+1;
+      }else{
+        document.getElementById("b3").innerHTML=`<img src=".\\img\\zero1.jpg" alt="" class="void">`;
+        count=count+1;
+
+      }}}
+
+document.getElementById("c1").onclick = function(){
+    if(choise==='human'){
+      if(count%2==0){
+        document.getElementById("c1").innerHTML=`<img src=".\\img\\cross1.jpg" alt="" class="void">`;
+        count=count+1;
+      }else{
+        document.getElementById("c1").innerHTML=`<img src=".\\img\\zero1.jpg" alt="" class="void">`;
+        count=count+1;
+
+      }}}
+    
+           
+  document.getElementById("c2").onclick = function(){
+    if(choise==='human'){
+      if(count%2==0){
+        document.getElementById("c2").innerHTML=`<img src=".\\img\\cross1.jpg" alt="" class="void">`;
+        count=count+1;
+      }else{
+        document.getElementById("c2").innerHTML=`<img src=".\\img\\zero1.jpg" alt="" class="void">`;
+        count=count+1;
+
+      }}}
+      
+  document.getElementById("c3").onclick = function(){
+    if(choise==='human'){
+      if(count%2==0){
+        document.getElementById("c3").innerHTML=`<img src=".\\img\\cross1.jpg" alt="" class="void">`;
+        count=count+1;
+      }else{
+        document.getElementById("c3").innerHTML=`<img src=".\\img\\zero1.jpg" alt="" class="void">`;
+        count=count+1;
+
+      }}}
  
-}
- 
-ready();
+          }ready();
