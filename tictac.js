@@ -59,14 +59,29 @@
   table.onclick = function(event) {
     let target = event.target; // где был клик?
   
-    if (target.tagName != 'div') return; // не на TD? тогда не интересует
+    //if (target.tagName != 'td') return; // не на TD? тогда не интересует
   
-    highlight(target); // подсветить TD
-  };
+    //highlight(target); // подсветить TD
+
+    if(choise==='human'){
+      if(count%2==0){
+       target.innerHTML=`<img src=".\\img\\cross1.jpg" alt="" class="void">`;
+       target.setAttribute("id", "a10");
+        count=count+1;
+        tabel_elem[0][0]='iscross';
+        checkingTheWinner();
+      }else{
+        target.innerHTML=`<img src=".\\img\\zero1.jpg" alt="" class="void">`;
+        target.setAttribute("id", "a10");
+        count=count+1;
+        tabel_elem[0][0]='isnull';
+        checkingTheWinner();}
+
+  }};
   
 
 
-  document.getElementById("a1").onclick = function(){
+ /* document.getElementById("a1").onclick = function(){
     if(choise==='human'){
       if(count%2==0){
         document.getElementById("a1").innerHTML=`<img src=".\\img\\cross1.jpg" alt="" class="void">`;
@@ -219,6 +234,6 @@ document.getElementById("c1").onclick = function(){
         tabel_elem[2][2]='isnull';
         checkingTheWinner();
 
-      }}}
+      }}}*/
  
           }ready();
