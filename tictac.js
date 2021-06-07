@@ -64,23 +64,26 @@
   table.onclick = function(event) {
     let target = event.target; // где был клик?
   
-    //if (target.tagName != 'td') return; // не на TD? тогда не интересует
+    if (target.tagName != 'BUTTON') return; // не на TD? тогда не интересует
   
     //highlight(target); // подсветить TD
 
     if(choise==='human'){
       if(count%2==0){
        target.innerHTML=`<img src=".\\img\\cross1.jpg" alt="" class="void">`;
-       target.setAttribute("id", "a10");
+       target.disabled = true;
         count=count+1;
-        tabel_elem[0][0]='iscross';
-        checkingTheWinner();
+        //tabel_elem[0][0]='iscross';
+        //checkingTheWinner();
       }else{
         target.innerHTML=`<img src=".\\img\\zero1.jpg" alt="" class="void">`;
-        target.setAttribute("id", "a10");
+        target.setAttribute("contenteditable","false");
         count=count+1;
-        tabel_elem[0][0]='isnull';
-        checkingTheWinner();}
+        target.disabled = true;
+     //  tabel_elem[0][0]='isnull';
+       // checkingTheWinner();
+
+      }
 
   }};
   
