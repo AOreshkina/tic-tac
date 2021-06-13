@@ -67,6 +67,11 @@
 
       }
     
+      
+        
+        
+
+      
 
  
   let table = document.getElementById("table_c");
@@ -88,8 +93,7 @@
        target.disabled = true;
         count=count+1;
         checkingTheWinnerForHuman();
-        //tabel_elem[0][0]='iscross';
-        //checkingTheWinner();
+
       }else{
         target.innerHTML=`<img src=".\\img\\zero1.jpg" alt="" class="void">`;
         target.setAttribute("contenteditable","false");
@@ -99,13 +103,30 @@
        console.log(winners_arr);
         count=count+1;
         target.disabled = true;
-     //  tabel_elem[0][0]='isnull';
-       // checkingTheWinner();
        checkingTheWinnerForHuman();
 
       }
+  } else if (choise=='robot'){
+  
 
-  }};
+    target.innerHTML=`<img src=".\\img\\zero1.jpg" alt="" class="void">`;
+    target.setAttribute("contenteditable","false");
+    let target_id = target.getAttribute("id");
+   let num_array = Number(target_id) ;
+   winners_arr[num_array] = 9;
+   console.log(winners_arr);
+    count=count+1;
+    target.disabled = true;
+   let new_id = winners_arr.findIndex(currentValue => currentValue == 0 ) ;
+   document.getElementById(new_id).innerHTML=`<img src=".\\img\\cross1.jpg" alt="" class="void">`;
+   winners_arr[new_id] = 2;
+   document.getElementById(new_id).disabled=true;
+   checkingTheWinnerForHuman();
+   roboClick();
+  }
+ 
+  }
+
   
 
 
