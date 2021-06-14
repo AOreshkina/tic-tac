@@ -240,7 +240,7 @@
 
     }
 
-    .undo{
+    #undo{
         grid-area: undo_button;
         cursor: pointer;
     background: #fff;
@@ -252,7 +252,7 @@
        line-height: 120%;
     }
 
-    .undo:hover{
+    #undo:hover{
         background: rgb(177, 253, 247);
     }
 

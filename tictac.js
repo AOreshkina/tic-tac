@@ -89,8 +89,8 @@
           }
 
       
-
- 
+  let new_id;
+  let num_array;
   let table = document.getElementById("table_c");
 
   table.onclick = function(event) {
@@ -104,7 +104,7 @@
       if(count%2==0){
        target.innerHTML=`<img src=".\\img\\cross1.jpg" alt="" class="void">`;
        let target_id = target.getAttribute("id");
-       let num_array = Number(target_id) ;
+       num_array = Number(target_id) ;
        winners_arr[num_array] = 2;
        console.log(winners_arr);
        target.disabled = true;
@@ -118,7 +118,7 @@
         target.innerHTML=`<img src=".\\img\\zero1.jpg" alt="" class="void">`;
         target.setAttribute("contenteditable","false");
         let target_id = target.getAttribute("id");
-       let num_array = Number(target_id) ;
+       num_array = Number(target_id) ;
        winners_arr[num_array] = 9;
        console.log(winners_arr);
         
@@ -135,15 +135,16 @@
     target.innerHTML=`<img src=".\\img\\zero1.jpg" alt="" class="void">`;
     target.setAttribute("contenteditable","false");
     let target_id = target.getAttribute("id");
-   let num_array = Number(target_id) ;
+   num_array = Number(target_id) ;
    winners_arr[num_array] = 9;
    console.log(winners_arr);
     count=count+1;
     target.disabled = true;
-   let new_id = winners_arr.findIndex(currentValue => currentValue == 0 ) ;
+   new_id = winners_arr.findIndex(currentValue => currentValue == 0 ) ;
    document.getElementById(new_id).innerHTML=`<img src=".\\img\\cross1.jpg" alt="" class="void">`;
    winners_arr[new_id] = 2;
    document.getElementById(new_id).disabled=true;
+  
    count+=1;
    console.log(count);
    document.getElementById("counter").innerHTML=`Счётчик ходов: `+count;
@@ -153,7 +154,28 @@
  
   }
  
-  
+  document.getElementById("undo").onclick = function(){
+    if (choise=='human'){
+    document.getElementById(num_array).innerHTML = " ";
+    document.getElementById(num_array).disabled=false;
+    winners_arr[num_array] = 0;
+    count-=1;
+    console.log(num_array);
+    document.getElementById("counter").innerHTML=`Счётчик ходов: `+count;
+  } else if (choise == 'robot'){
+
+      document.getElementById(new_id).innerHTML = " ";
+      document.getElementById(num_array).innerHTML = " ";
+      document.getElementById(num_array).disabled=false;
+      document.getElementById(new_id).disabled=false;
+      
+      winners_arr[new_id] = 0;
+      winners_arr[num_array] = 0;
+      count= count - 2;
+      console.log(count);
+      document.getElementById("counter").innerHTML=`Счётчик ходов: `+count;
+    }
+  }
 
 
  
