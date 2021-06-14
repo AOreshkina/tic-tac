@@ -182,6 +182,8 @@
       winners_arr[i]=0;
       document.getElementById(i).innerHTML = " ";
     }
+    count= 0;
+    document.getElementById("counter").innerHTML=`Счётчик ходов: `+count;
     console.log("cffffffgsdfddddddddd");
     
       }
