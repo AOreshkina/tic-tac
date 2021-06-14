@@ -69,7 +69,24 @@
     
       
         
-        
+      function checkingTheWinnerForRobo(){
+        let row_1 = winners_arr[0]+winners_arr[1]+winners_arr[2];
+        let row_2 = winners_arr[3]+winners_arr[4]+winners_arr[5];
+        let row_3 = winners_arr[6]+winners_arr[7]+winners_arr[8];
+        let column_1 = winners_arr[0]+winners_arr[3]+winners_arr[6];
+        let column_2 = winners_arr[1]+winners_arr[4]+winners_arr[7];
+        let column_3 = winners_arr[2]+winners_arr[5]+winners_arr[8];
+        let diagonal_1 = winners_arr[0]+winners_arr[4]+winners_arr[8];
+        let diagonal_2 = winners_arr[2]+winners_arr[4]+winners_arr[6];
+        if ((row_1===6)||(row_2===6)||(row_3===6)||(column_1===6)||(column_2===6)||(column_3===6)||(diagonal_1===6)||(diagonal_2===6)){
+          your_symbol.innerHTML=`<div id="victory_text">Ты выиграл!</div>`;
+        } else if ((row_1==27)||(row_2==27)||(row_3==27)||(column_1==27)||(column_2==27)||(column_3==27)||(diagonal_1==27)||(diagonal_2==27)){
+          your_symbol.innerHTML=`<div id="victory_text">Выиграл твой друг!</div>`;
+        } else {
+          your_symbol.innerHTML=`<div id="victory_text">Ничья!</div>`;
+        }
+    
+          }
 
       
 
@@ -91,7 +108,10 @@
        winners_arr[num_array] = 2;
        console.log(winners_arr);
        target.disabled = true;
-        count=count+1;
+        count+=1;
+        document.getElementById("counter").innerHTML=`Счётчик ходов: `+count;
+        console.log(count);
+
         checkingTheWinnerForHuman();
 
       }else{
@@ -101,9 +121,12 @@
        let num_array = Number(target_id) ;
        winners_arr[num_array] = 9;
        console.log(winners_arr);
-        count=count+1;
+        
         target.disabled = true;
        checkingTheWinnerForHuman();
+       count+=1;
+       console.log(count);
+       document.getElementById("counter").innerHTML=`Счётчик ходов: `+count;
 
       }
   } else if (choise=='robot'){
@@ -121,12 +144,15 @@
    document.getElementById(new_id).innerHTML=`<img src=".\\img\\cross1.jpg" alt="" class="void">`;
    winners_arr[new_id] = 2;
    document.getElementById(new_id).disabled=true;
+   count+=1;
+   console.log(count);
+   document.getElementById("counter").innerHTML=`Счётчик ходов: `+count;
    checkingTheWinnerForHuman();
-   roboClick();
+  // roboClick();
   }
  
   }
-
+ 
   
 
 
