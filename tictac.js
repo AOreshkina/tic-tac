@@ -183,11 +183,7 @@
       document.getElementById(i).innerHTML = " ";
     }
     console.log("cffffffgsdfddddddddd");
-    /*let table_array = document.getElementsByClassName("table_elem");
-    table_array.forEach(function(item, index, arr){
-      document.getElementById(item).innerHTML = " ";
-      winners_arr[index] = 0;
-       })*/
+    
       }
 
  
