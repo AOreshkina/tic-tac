@@ -176,7 +176,19 @@
       document.getElementById("counter").innerHTML=`Счётчик ходов: `+count;
     }
   }
+  document.getElementById("new_game").onclick = function(){
 
+    for(let i =0; i<9; i++){
+      winners_arr[i]=0;
+      document.getElementById(i).innerHTML = " ";
+    }
+    console.log("cffffffgsdfddddddddd");
+    /*let table_array = document.getElementsByClassName("table_elem");
+    table_array.forEach(function(item, index, arr){
+      document.getElementById(item).innerHTML = " ";
+      winners_arr[index] = 0;
+       })*/
+      }
 
  
  
