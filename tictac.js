@@ -79,9 +79,9 @@
         let diagonal_1 = winners_arr[0]+winners_arr[4]+winners_arr[8];
         let diagonal_2 = winners_arr[2]+winners_arr[4]+winners_arr[6];
         if ((row_1===6)||(row_2===6)||(row_3===6)||(column_1===6)||(column_2===6)||(column_3===6)||(diagonal_1===6)||(diagonal_2===6)){
-          your_symbol.innerHTML=`<div id="victory_text">Ты выиграл!</div>`;
-        } else if ((row_1==27)||(row_2==27)||(row_3==27)||(column_1==27)||(column_2==27)||(column_3==27)||(diagonal_1==27)||(diagonal_2==27)){
           your_symbol.innerHTML=`<div id="victory_text">Выиграл твой друг!</div>`;
+        } else if ((row_1==27)||(row_2==27)||(row_3==27)||(column_1==27)||(column_2==27)||(column_3==27)||(diagonal_1==27)||(diagonal_2==27)){
+          your_symbol.innerHTML=`<div id="victory_text">Ты выиграл!</div>`;
         } else {
           your_symbol.innerHTML=`<div id="victory_text">Ничья!</div>`;
         }
@@ -148,7 +148,7 @@
    count+=1;
    console.log(count);
    document.getElementById("counter").innerHTML=`Счётчик ходов: `+count;
-   checkingTheWinnerForHuman();
+   checkingTheWinnerForRobo();
   // roboClick();
   }
  
