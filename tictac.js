@@ -184,6 +184,10 @@
     }
     count= 0;
     document.getElementById("counter").innerHTML=`Счётчик ходов: `+count;
+    your_symbol.innerHTML=`<div id="victory_text">Выбери противника:</div>`
+    choice = " ";
+    player_robot.disabled = false; 
+    player_human.disabled = false;
     console.log("cffffffgsdfddddddddd");
     
       }
